@@ -1,0 +1,24 @@
+{
+  "name": "Categoria",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "noticia": {
+      "type": "hasMany",
+      "model": "Noticia",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

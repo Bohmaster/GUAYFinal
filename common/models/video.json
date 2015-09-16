@@ -1,0 +1,18 @@
+{
+  "name": "Video",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

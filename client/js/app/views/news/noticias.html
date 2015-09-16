@@ -1,0 +1,16 @@
+<div class="container" style="margin-top: 150px">
+
+  <h1 style="font-family: 'Chinese', Fallback, sans-serif;  font-size: 50px;">{{categoriaS[0].titulo}}</h1>
+
+  <div class="row">
+
+    <div class="col-md-3 normal sep" ng-repeat="n in noticiasS" ui-sref="app.noticia({articuloId: n.id})">
+      <div class="title-cat">{{ n.titulo }}</div>
+      <div class="description-cat">
+        {{ n.descripcion }}
+      </div>
+    </div>
+
+  </div>
+
+</div>

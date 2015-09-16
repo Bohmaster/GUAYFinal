@@ -1,0 +1,44 @@
+{
+  "name": "Noticia",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "foto_principal": {
+      "type": "string"
+    },
+    "foto_miniatura": {
+      "type": "string"
+    },
+    "imagenes": {
+      "type": [
+        "string"
+      ]
+    },
+    "volanta": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "cuerpo": {
+      "type": "string"
+    },
+    "destacada": {
+      "type": "boolean"
+    },
+    "esVideo": {
+      "type": "boolean"
+    },
+    "fecha": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

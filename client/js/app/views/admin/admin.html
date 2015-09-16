@@ -1,0 +1,55 @@
+<div class="container" style="margin-top: 200px">
+  <h3>Agregar noticia</h3>
+  <form name="todoForm" novalidate>
+    <div class="form-group" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
+      <input type="text" class="form-control focus margin" name="volanta"
+             placeholder="Volanta" autocomplete="off" required
+             ng-model="noticia.volanta">
+      <input type="text" class="form-control focus margin" name="titulo"
+             placeholder="Titulo" autocomplete="off" required
+             ng-model="noticia.titulo">
+      <input type="text" class="form-control focus margin" name="descripcion"
+             placeholder="Descripcion" autocomplete="off" required
+             ng-model="noticia.descripcion">
+      <textarea ui-tinymce="tinyMCEOptions" class="form-control focus" name="cuerpo"
+              rows="4" cols="50"
+              placeholder="Cuerpo" autocomplete="off"
+              ng-model="noticia.cuerpo"></textarea>
+      <input type="text" id="categoria" class="form-control focus margin" name="category" list="categorias"
+             placeholder="Seleccione categoría" autocomplete="off" required>
+      <datalist id="categorias">
+        <option ng-repeat="c in categorias" value="{{c.titulo}}" id="{{c.id}}">
+      </datalist>
+      <label for="destacada">Destacada</label>
+      <input type="checkbox" id="destacada" class="form-control focus margin" name="destacada"
+             autocomplete="off" ng-model="noticia.destacada">
+      <label for="files">Imagenes</label>
+      <input type="file"
+             file-input="files"
+             class="margin"
+             multiple
+        />
+      <li ng-repeat="file in files">{{file.name}}</li>
+    </div>
+    <button class="btn btn-default" ng-disabled="todoForm.$invalid" ng-click="agregarNoticia()">Agregar</button>
+  </form>
+
+  <div class="list-group">
+    <div class="list-group-item" ng-repeat="n in noticias">
+      <a ng-click="editarNoticia(n.id, n.categoriaId)">
+        <i class="glyphicon glyphicon-edit pull-right margin-left"></i>
+      </a>
+      <i class="glyphicon glyphicon-remove pull-right"
+         ng-click="borrarNoticia(n.id)">
+      </i>
+      <img src="/api/containers/images/download/{{n.foto_principal}}" class="left" ng-if="n.foto_miniatura">
+      <img src="/api/containers/images/download/{{n.foto_principal}}" alt=""/>
+      <div class="left">
+        {{ n.titulo }}
+        <p compile="{{ n.cuerpo }}"></p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+
+</div>

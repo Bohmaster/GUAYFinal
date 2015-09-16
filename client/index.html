@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Wed Sep 16 2015 02:02:58 GMT+0000 (UTC) -->
+<html data-wf-site="55f7229281c0c2a86eeb2a6c" data-wf-page="55f7229281c0c2a86eeb2a6d" ng-app="guay-news">
+<head>
+  <meta charset="utf-8">
+  <title>guay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="vendor/modernizr/normalize.css">
+  <link rel="stylesheet" type="text/css" href="vendor/webflow/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/guay.webflow.css">
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <script type="text/javascript" src="vendor/modernizr/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+
+  <!-- vendor -->
+  <script src="vendor/jquery/dist/jquery.js"></script>
+  <script src="vendor/angular/angular.js"></script>
+  <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="vendor/angular-resource/angular-resource.js"></script>
+  <script src="vendor/angular-ui-tinymce/src/tinymce.js"></script>
+  <script src="vendor/tinymce-dist/tinymce.js"></script>
+  <script src="vendor/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="vendor/angularjs-socialshare/dist/angular-socialshare.min.js"></script>
+  <!-- end vendor -->
+
+</head>
+<body class="body">
+  <div class="w-section header">
+    <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400">
+      <div class="w-nav-button menuboton">
+        <div class="w-icon-nav-menu iconomenu"></div>
+      </div>
+      <a class="w-nav-brand" href="#"><img class="logoguay" width="198" src="images/10805846_10205225580069453_143012730466873051_n.jpg">
+      </a>
+      <a class="w-clearfix w-inline-block linksur" href="#"><img class="logosur" width="90" src="images/miradas2.png">
+      </a>
+      <nav class="w-nav-menu navmenu" role="navigation"><a class="w-nav-link navlink" href="#">ALMAFUERTES</a><a class="w-nav-link navlink" href="#">ENTRE/VISTAS</a><a class="w-nav-link navlink" href="#">ALEPH</a><a class="w-nav-link navlink" href="#">MI PATRIA ES</a><a class="w-nav-link navlink" href="#">1000 Y TANTOS</a><a class="w-nav-link navlink" href="#">MÁQUINA DE MIRAR</a><a class="w-nav-link navlink" href="#">MÚSICA</a><a class="w-nav-link navlink" href="#">VIOLENCIA</a>
+      </nav>
+    </div>
+  </div>
+  <a class="w-inline-block linkfecha" href="#inicio"><img class="circ" width="77" src="images/circ.png"><img class="flecha" width="75" src="images/flecha.png">
+  </a>
+
+  <div class="divtodo" style="margin-top: 50px;" data-ix="flecha">
+
+    <ui-view></ui-view>
+
+    <div class="w-section footer" style="padding: 30px;">
+
+        <div class="w-row">
+          <div class="w-col w-col-4">
+            <a class="w-inline-block linkface" href="#"><img style="float:left;" width="116" src="images/facebook2.jpg">
+            </a>
+          </div>
+          <div class="w-col w-col-4">
+            <a class="w-inline-block linktwitter" href="#"><img width="116" src="images/twitter.jpg">
+            </a>
+          </div>
+          <div class="w-col w-col-4">
+            <a class="w-inline-block linkcolectivo" href="#"><img style="float: right;" width="208" src="images/colectivo.jpg">
+            </a>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/webflow/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+
+  <!-- application -->
+  <script src="js/app/app.js"></script>
+  <script src="js/app/config/routes.js"></script>
+  <script src="js/app/services/lb-services.js"></script>
+  <script src="js/app/controllers/MainController.js"></script>
+  <script src="js/app/controllers/HomeController.js"></script>
+  <script src="js/app/config/cfg.js"></script>
+  <script src="js/app/directives/navbar.js"></script>
+  <script src="js/app/controllers/NoticiasController.js"></script>
+  <script src="js/app/directives/newsblock.js"></script>
+
+</body>
+</html>
