@@ -35,6 +35,9 @@
     },
     "fecha": {
       "type": "date"
+    },
+    "tags": {
+      "type": "string"
     }
   },
   "validations": [],

@@ -1,0 +1,8 @@
+<div class="container" style="padding: 30px; margin-left: -15px; background: lightgray;">
+  <h4 style="font-size: 19px; font-family: 'Cheap potatoes relleno'; margin-bottom: 15px;">También te puede interesar...</h4>
+  <div class="col-md-4 normal" ng-repeat="n in sugeridas" ng-init="init()" ui-sref="app.noticia({articuloId: n.id})">
+    <div class="title">{{ n.titulo | words: 4 }}</div>
+
+    <img src="/api/containers/images/download/{{n.foto_principal}}" width="100%" height="300"  alt=""/>
+  </div>
+</div>

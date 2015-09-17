@@ -7,6 +7,8 @@ angular.module("guay-news",
     'ui.tinymce',
     'lbServices',
 
-    '720kb.socialshare'
+    '720kb.socialshare',
+
+    'truncate'
   ]
 );

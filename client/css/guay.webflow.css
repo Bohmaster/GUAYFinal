@@ -239,20 +239,21 @@
 }
 .titulo1 {
   padding-top: 18px;
-  font-family:'Alegreyasans medium', sans-serif;
+  font-family:'Alegreyasans thin', sans-serif;
   color: #5f5d5d;
   font-size: 30px;
   font-weight: 100;
 }
 .titulo2 {
-  margin-top: 28px;
+  margin-top: -15px;
   font-family:'Chinese rocks rg titulo', sans-serif;
   color: #ff0f20;
   font-size: 57px;
 }
 .divrojo {
-  margin-top: 34px;
-  background-color: #ff0f20;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  background-color: black;
 }
 .parrrojo {
   padding: 25px;
@@ -441,6 +442,12 @@
 @font-face {
   font-family: 'Alegreyasans';
   src: url('../fonts/AlegreyaSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alegreyasans thin';
+  src: url('../fonts/AlegreyaSans-Thin.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }

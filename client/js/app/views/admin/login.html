@@ -1,0 +1,14 @@
+<div class="w-container" style="padding: 20px;">
+  <form action=""><div class="form-group" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}" style="font-family: Alegreyasans, sans-serif; font-size: 20px;">
+    <h3 style="font-family:'Cheap potatoes relleno', sans-serif; margin-bottom: 35px; color: red; text-align: center;">Ingreso administración</h3>
+    <label for="volanta">Usuario</label>
+    <input type="text" class="form-control focus margin" name=""
+           placeholder="Ingrese su password" autocomplete="off" required
+           ng-model="user.name">
+    <label for="titulo">Contraseña</label>
+    <input type="text" class="form-control focus margin" name=""
+           placeholder="Ingrese su contraseña" autocomplete="off" required
+           ng-model="user.password">
+<center>    <button class="" ng-disabled="todoForm.$invalid" style="margin: 10px; width: 40%; background: red; font-size: 30px; font-family: 'Chinese rocks rg titulo', sans-serif; color: black !important; height: 55px;" ng-click="login()">INGRESAR</button>
+</center>  </div></form>
+</div>

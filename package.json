@@ -25,5 +25,6 @@
     "type": "",
     "url": ""
   },
-  "description": "GUAYFinal"
+  "description": "GUAYFinal",
+  "start": "http-server -a localhost -p 8000"
 }

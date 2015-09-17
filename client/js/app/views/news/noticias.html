@@ -7,7 +7,7 @@
     <div class="col-md-3 normal sep" ng-repeat="n in noticiasS" ui-sref="app.noticia({articuloId: n.id})">
       <div class="title-cat">{{ n.titulo }}</div>
       <div class="description-cat">
-        {{ n.descripcion }}
+        {{ n.descripcion | words: 20 }}
       </div>
     </div>
 

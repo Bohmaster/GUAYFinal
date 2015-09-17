@@ -1,37 +1,43 @@
-<h3>Editar noticia</h3>
-<form name="todoForm" novalidate>
-  <div class="form-group" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
-    Volanta
-    <input type="text" class="form-control focus margin" name="volanta"
-           placeholder="Volanta" autocomplete="off"
-           ng-model="noticia.volanta">
-    Titulo
-    <input type="text" class="form-control focus margin" name="titulo"
-           placeholder="Titulo" autocomplete="off"
-           ng-model="noticia.titulo">
-    Bajada
-    <input type="text" class="form-control focus margin" name="descripcion"
-           placeholder="Descripcion" autocomplete="off"
-           ng-model="noticia.descripcion">
-    Cuerpo
-    <textarea ui-tinymce class="form-control focus" name="cuerpo"
-              rows="4" cols="50"
-              placeholder="Cuerpo" autocomplete="off"
-              ng-model="noticia.cuerpo"></textarea>
-    Categoria
-    <input type="text" id="categoria" class="form-control focus margin" name="category" list="categorias"
-           placeholder="Seleccione categoría" autocomplete="off">
-    <datalist id="categorias">
-      <option ng-repeat="c in categorias" value="{{c.titulo}}" id="{{c.id}}">
-    </datalist>
-    <label for="files">Imagen</label>
-    <input type="file"
-           file-input="files"
-           class="margin"
-           multiple
-      />
-    <li ng-repeat="file in files">{{file.name}}</li>
-  </div>
-  <button class="btn btn-default" ng-disabled="todoForm.$invalid" ng-click="editarNoticia()">Agregar</button>
-</form>
+<div style="position: relative; padding: 30px;">
+  <h3 style="font-family:'Cheap potatoes relleno', sans-serif; margin-bottom: 35px; color: red;">Editar noticia</h3>
+  <form name="todoForm" novalidate style="font-family: Alegreyasans, sans-serif; font-size: 20px;">
+    <div class="form-group" ng-class="{'has-error': todoForm.content.$invalid && todoForm.content.$dirty}">
+      <label for="volanta">Volanta</label>
+      <input type="text" class="form-control focus margin" name="volanta"
+             placeholder="Volanta" autocomplete="off" required
+             ng-model="noticia.volanta">
+      <label for="titulo">Título</label>
+      <input type="text" class="form-control focus margin" name="titulo"
+             placeholder="Titulo" autocomplete="off" required
+             ng-model="noticia.titulo">
+      <label for="bajada">Bajada</label>
+      <input type="text" class="form-control focus margin" name="descripcion"
+             placeholder="Descripcion" autocomplete="off" required
+             ng-model="noticia.descripcion">
+      <label for="cuerpo">Cuerpo</label>
+      <textarea ui-tinymce="tinyMCEOptions" class="form-control focus" name="cuerpo"
+                rows="20" cols="50"
+                placeholder="Cuerpo" autocomplete="off"
+                ng-model="noticia.cuerpo"></textarea>
+      <label for="category" style="margin-top: 10px;">Categoría</label>
+      <input type="text" id="categoria" class="form-control focus margin" name="category" list="categorias"
+             placeholder="Seleccione categoría" autocomplete="off" required>
+      <datalist id="categorias">
+        <option ng-repeat="c in categorias" value="{{c.titulo}}" id="{{c.id}}">
+      </datalist>
+      <label for="destacada">Destacada</label>
+      <input type="checkbox" id="destacada" class="form-control focus margin" name="destacada"
+             autocomplete="off" ng-model="noticia.destacada">
+      <input type="file"
+             style="font-size: 15px;"
+             file-input="files"
+             class="margin"
+             multiple
+        />
+      <li ng-repeat="file in files">{{file.name}}</li>
+    </div>
+    <center>    <button class="" ng-disabled="todoForm.$invalid" style="margin: 10px; width: 40%; background: red; font-size: 30px; font-family: 'Chinese rocks rg titulo', sans-serif; color: black !important; height: 55px;" ng-click="editarNoticia()">EDITAR</button>
+    </center>
+  </form>
 
+</div>

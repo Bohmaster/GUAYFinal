@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
 <!-- Last Published: Wed Sep 16 2015 02:02:58 GMT+0000 (UTC) -->
-<html data-wf-site="55f7229281c0c2a86eeb2a6c" data-wf-page="55f7229281c0c2a86eeb2a6d" ng-app="guay-news">
+<html data-wf-site="55f7229281c0c2a86eeb2a6c" data-wf-page="55f7229281c0c2a86eeb2a6d" ng-app="guay-news" ng-controller="MainController">
 <head>
   <meta charset="utf-8">
   <title>guay</title>
@@ -11,6 +11,8 @@
   <link rel="stylesheet" type="text/css" href="vendor/webflow/webflow.css">
   <link rel="stylesheet" type="text/css" href="css/guay.webflow.css">
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css"/>
+  <link rel="stylesheet" href="vendor/angular-socialshare/angular-socialshare.css"/>
   <link rel="stylesheet" href="css/base.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 
@@ -28,6 +30,7 @@
   <script src="vendor/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="vendor/angularjs-socialshare/dist/angular-socialshare.min.js"></script>
+  <script src="vendor/angular-truncate/src/truncate.js"></script>
   <!-- end vendor -->
 
 </head>
@@ -39,9 +42,11 @@
       </div>
       <a class="w-nav-brand" href="#"><img class="logoguay" width="198" src="images/10805846_10205225580069453_143012730466873051_n.jpg">
       </a>
-      <a class="w-clearfix w-inline-block linksur" href="#"><img class="logosur" width="90" src="images/miradas2.png">
+      <a class="w-clearfix w-inline-block linksur" href=""><img class="logosur" width="90" src="images/miradas2.png" ng-click="admin()">
       </a>
-      <nav class="w-nav-menu navmenu" role="navigation"><a class="w-nav-link navlink" href="#">ALMAFUERTES</a><a class="w-nav-link navlink" href="#">ENTRE/VISTAS</a><a class="w-nav-link navlink" href="#">ALEPH</a><a class="w-nav-link navlink" href="#">MI PATRIA ES</a><a class="w-nav-link navlink" href="#">1000 Y TANTOS</a><a class="w-nav-link navlink" href="#">MÁQUINA DE MIRAR</a><a class="w-nav-link navlink" href="#">MÚSICA</a><a class="w-nav-link navlink" href="#">VIOLENCIA</a>
+      <nav class="w-nav-menu navmenu" role="navigation"><a class="w-nav-link navlink"
+                                                           ng-repeat="c in categorias"
+                                                           ui-sref="app.noticias({categoriaId: c.id})">{{c.titulo}}</a>
       </nav>
     </div>
   </div>
@@ -52,20 +57,22 @@
 
     <ui-view></ui-view>
 
-    <div class="w-section footer" style="padding: 30px;">
+    <div class="w-section footer" style="">
 
-        <div class="w-row">
-          <div class="w-col w-col-4">
-            <a class="w-inline-block linkface" href="#"><img style="float:left;" width="116" src="images/facebook2.jpg">
-            </a>
-          </div>
-          <div class="w-col w-col-4">
-            <a class="w-inline-block linktwitter" href="#"><img width="116" src="images/twitter.jpg">
-            </a>
-          </div>
-          <div class="w-col w-col-4">
-            <a class="w-inline-block linkcolectivo" href="#"><img style="float: right;" width="208" src="images/colectivo.jpg">
-            </a>
+        <div class="container" style="padding-top: 50px; margin-top: 50px; border-top: 4px double black;">
+          <div class="w-row">
+            <div class="w-col w-col-4">
+              <a class="w-inline-block linkface" href="#"><img style="float:left;" width="116" src="images/facebook2.jpg">
+              </a>
+            </div>
+            <div class="w-col w-col-4">
+              <a class="w-inline-block linktwitter" href="#"><img width="116" src="images/twitter.jpg">
+              </a>
+            </div>
+            <div class="w-col w-col-4">
+              <a class="w-inline-block linkcolectivo" href="#"><img style="float: right;" width="208" src="images/colectivo.jpg">
+              </a>
+            </div>
           </div>
         </div>
 
